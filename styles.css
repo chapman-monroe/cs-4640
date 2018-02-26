@@ -1,0 +1,42 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.navbar{
+	background-color: #0B4672; 
+	border-color: #0B4672; 
+	border-radius: 0;
+}
+.navbar-brand{
+	padding: 0 0 0 15px;
+}
+.logo{
+	width: 50px;
+}
+.navbar-form{
+	margin-left: 500px;
+	padding: 0 40px;
+}
+.navbar-btn{
+	margin-right: 15px;
+}
+
+@media screen and (max-width: 960px){
+	.navbar-form{
+		margin-left: 300px;
+	}
+}
+
+@media screen and (max-width: 760px){
+	.navbar-form{
+		display: none;
+	}
+	.navbar-header{
+		width: 20%;
+		display: inline-block;
+	}	
+	.navbar-btn{
+		vertical-align: top;
+		float: right;
+	}
+}
