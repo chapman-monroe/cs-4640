@@ -2,14 +2,34 @@
 <html>
 <head>
   <title>Men's Basketball</title>
-  <script defer src="transition.js"></script>
+  <script defer src="collapse.js"></script>
    <meta http-equiv="X-UA-Compatible" content="IE=edge">  <!-- required to handle IE -->
     
     <meta name="viewport" content="width=device-width, initial-scale=1">    
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script defer src="transition/transition.js"></script>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.in").each(function(){
+          $(this).siblings(".panel-heading").find(".glyphicon").addClass("glyphicon-minus").removeClass("glyphicon-plus");
+        });
+        
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse").on('show.bs.collapse', function(){
+          $(this).parent().find(".glyphicon").removeClass("glyphicon-plus").addClass("glyphicon-minus");
+        }).on('hide.bs.collapse', function(){
+          $(this).parent().find(".glyphicon").removeClass("glyphicon-minus").addClass("glyphicon-plus");
+        });
+    });
+</script>
+
 </head>
 <body>
   <nav class="navbar navbar-default">
@@ -27,55 +47,115 @@
       <button type="button" class="btn btn-default navbar-btn navbar-right">Log Out</button>
     </div> 
   </nav>
+
   <div class="sidenav-content .col-xs-6 .col-md-4">
     <h2>Filters</h2>
-     
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-plus"></span> Players</a>
+    <div class="btn-group">
+
+    <div id="collapseOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                      <div class="checkbox">
+                      <label><input type="checkbox" value="">Kyle Guy</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="">Ty Jerome</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="" >Isaiah Wilkins</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="" >Deandre Hunter</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="" >Devon Hall</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="" >Mamadi Diatike</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="" >Nigel Johnson</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="" >Jack Salt</label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-plus"></span> Games</a> 
+    <div class="btn-group">
+
+    <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                      <div class="checkbox">
+                      <label><input type="checkbox" value="" >at Pitt</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="" >vs. Georgia Tech </label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="" >at Miami</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="" >vs. Viginia Tech</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="" >at Florida State</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="" >at Syracuse</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="" >vs. Louisville</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="" >at Duke</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="" >vs. Clemson </label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="" >at Wake Forest </label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+ <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-plus"></span> Season </a> 
+    <div class="btn-group">
+
+    <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                      <div class="checkbox">
+                      
+                        <label><input type="checkbox" value="" >2017-2018</label>
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox" value="" >2016-2017</label>
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox" value="" >2015-2016</label>
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox" value="" >2014-2015</label>
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox" value="" >2013-2014 </label>
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox" value="" >2012-2013</label>
+                      </div>
+
+                </div>
+            </div>
 
 
 
-
-<div class="btn-group">
- <h4> Players </h4>
-  <div class="checkbox">
-  <label><input type="checkbox" value="">Kyle Guy</label>
 </div>
-<div class="checkbox">
-  <label><input type="checkbox" value="">Ty Jerome</label>
-</div>
-<div class="checkbox">
-  <label><input type="checkbox" value="" >Isaiah Wilkins</label>
-</div>
-<div class="checkbox">
-  <label><input type="checkbox" value="" >Deandre Hunter</label>
-</div>
-<div class="checkbox">
-  <label><input type="checkbox" value="" >Devon Hall</label>
-</div>
-<div class="checkbox">
-  <label><input type="checkbox" value="" >Mamadi Diatike</label>
-</div>
-<div class="checkbox">
-  <label><input type="checkbox" value="" >Nigel Johnson</label>
-</div>
-<div class="checkbox">
-  <label><input type="checkbox" value="" >Jack Salt</label>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
   </div>
   <div class=".col-xs-12 .col-sm-6 .col-md-8 main-content">
     <div class="content">
@@ -129,6 +209,19 @@
       
     </div>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>

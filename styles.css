@@ -164,6 +164,29 @@ left: 5px;
 
 
 /*Responsiveness*/
+@media screen and (max-width: 990px){
+
+
+
+	.longbox{
+
+		width: 180px;
+		position: center;
+
+	}
+
+	.box{
+
+		text-align: center;
+		border: black solid 1px;
+		
+		width: 180px; 
+		padding-right: 0; 
+		padding-left: 0%; 
+		height: 200px;
+	}
+}
+
 @media screen and (max-width: 960px){
 	.navbar-form{
 		margin-left: 300px;
@@ -190,9 +213,18 @@ left: 5px;
 		float: right;
 	}
 }
+@media screen and (max-width: 600px){
+
+	.sidenav-content{
+
+		display:none;
+	}
+
 @media screen and (max-width: 390px){
 	.navbar-nav{
 		float: right;
 	}
-}
 
+
+
+}
