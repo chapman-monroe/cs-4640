@@ -21,24 +21,76 @@ body{
 .navbar-btn{
 	margin-right: 15px;
 }
-.sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 20%; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    top: 0; /* Stay at the top */
-    left: 0;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-}
+
 .sidenav-content{
 	margin-left: 65px;
+	display: inline-block;
+	height: 100%; 
+    /*position: absolute; 
+    top: 20px; 
+    left: 0;*/
+    overflow-x: hidden; 
+    padding-top: 20px;
+    vertical-align: top;
 }
 .sidenav-content h2{
-	padding-top: 70px;
 	font-size: 24px;
+
 }
 .sidenav-content a{
 	display: block;
+	font-size: 16px;
+}
+.main-content{
+	display: inline-block;
+	width: 75%;
+	/*position: relative;*/
+	right: 15px;
+}
+.row{
+	margin: 0;
+}
+.content{
+	margin-left: 80px;
+	background-color: #E0E0E0;
+	padding: 20px;
+}
+.content h2{
+	font-size: 24px;
+	padding-bottom: 15px;
+	margin: 0;
+}
+.main-row{
+	width: 95%;
+	background-color: white; 
+	margin: 15px auto;
+}
+.main-row h3{
+	font-size: 16px;
+	text-transform: uppercase;
+	padding-left: 15px;
+	margin: 3px 0;
+}
+.row-header{
+	border-bottom: black solid 1px;
+}
+.box{
+	text-align: center;
+	border: black solid 1px;
+	margin: 15px 1.6%;
+	width: 30%; 
+	padding-right: 0; 
+	padding-left: 0; 
+	height: 200px;
+}
+.winner{
+	width: 80%;
+	margin: 0 auto;
+}
+.box h4{
+	font-size: 64px;
+	position: relative;
+	padding-top: 50px;
 }
 
 @media screen and (max-width: 960px){
