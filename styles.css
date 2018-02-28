@@ -144,6 +144,22 @@ left: 5px;
 .form-group h2{
 	font-size: 18px;
 }
+.login-button{
+	width: 70%;
+	margin-left: 15%;
+	/*background-color: #0B4672;*/
+	/*color: white;*/
+	
+}
+/*.login-button:hover{
+	background-color: white;
+	color: #0B4672;
+	
+}*/
+.label{
+	font
+	
+}
 
 /*Responsiveness*/
 @media screen and (max-width: 960px){
