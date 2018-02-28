@@ -2,6 +2,7 @@ body{
 	margin: 0;
 	padding: 0;
 }
+/*Nav Bar Styles*/
 .navbar{
 	background-color: #0B4672; 
 	border-color: #0B4672; 
@@ -21,7 +22,15 @@ body{
 .navbar-btn{
 	margin-right: 15px;
 }
+/*Nav Bar Styles -- Login Page*/
+.title{
+	color: white;
+	font-size: 20px;
+	font-style: bold;
+	padding: 15px;
+}
 
+/*Sidebar Styles*/
 .sidenav-content{
 	margin-left: 65px;
 	display: inline-block;
@@ -41,6 +50,7 @@ body{
 	display: block;
 	font-size: 16px;
 }
+/*Main Box Styles*/
 .main-content{
 	display: inline-block;
 	width: 75%;
@@ -92,7 +102,21 @@ body{
 	position: relative;
 	padding-top: 50px;
 }
+/*Login Form Styles*/
+.text-center{
+	width: 500px;
+	margin: 0 auto;
+	background-color: #E0E0E0;
+}
+.form-group{
+	width: 70%;
+	margin: 0 auto;
+}
+.form-group h2{
+	font-size: 18px;
+}
 
+/*Responsiveness*/
 @media screen and (max-width: 960px){
 	.navbar-form{
 		margin-left: 300px;
