@@ -93,6 +93,35 @@ body{
 	padding-left: 0; 
 	height: 200px;
 }
+
+.longbox{
+
+	text-align: left;
+	border: black solid 1px;
+	margin: 15px 1.6%;
+	width: 30%; 
+	padding-right: 0; 
+	padding-left: 0; 
+	height: 430px;
+
+}
+
+.longbox h5{
+
+	display:inline-block;
+	vertical-align: top; 
+	padding: 0 0 0 10px;
+
+}
+
+.logo{
+
+position:relative;
+top: 5px;
+left: 5px; 
+
+}
+
 .winner{
 	width: 80%;
 	margin: 0 auto;
