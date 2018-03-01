@@ -191,6 +191,17 @@ left: 5px;
 	.navbar-form{
 		margin-left: 300px;
 	}
+
+	.box{
+
+		width:90%;
+
+	}
+	.longbox{
+
+		width:90%;
+		text-align: center; 
+	}
 }
 @media screen and (max-width: 770px){
 	.navbar-nav{
