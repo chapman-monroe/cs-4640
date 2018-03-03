@@ -1,4 +1,5 @@
-<!--Please note: In order to make an accordion menu we used JavaScript code from the following site: https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-accordion.php#collapse-events-->
+<!-- Chapman Monroe, Jack Copeland -->
+<!--Please note: In order to make an accordion menu we looked at JavaScript code from the following site: https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-accordion.php#collapse-events-->
 
 <!DOCTYPE html>
 <html>
@@ -18,12 +19,11 @@
 
     <script>
     $(document).ready(function(){
-        // Add minus icon for collapse element which is open by default
+        
         $(".collapse.in").each(function(){
           $(this).siblings(".panel-heading").find(".glyphicon").addClass("glyphicon-minus").removeClass("glyphicon-plus");
         });
         
-        // Toggle plus minus icon on show hide of collapse element
         $(".collapse").on('show.bs.collapse', function(){
           $(this).parent().find(".glyphicon").removeClass("glyphicon-plus").addClass("glyphicon-minus");
         }).on('hide.bs.collapse', function(){
