@@ -125,6 +125,7 @@ left: 5px;
 .winner{
 	width: 80%;
 	margin: 0 auto;
+	display: block;
 }
 .box h4{
 	font-size: 64px;
@@ -164,26 +165,27 @@ left: 5px;
 
 
 /*Responsiveness*/
-@media screen and (max-width: 990px){
-
-
-
+@media screen and (max-width: 991px){
 	.longbox{
-
-		width: 180px;
+		width: 90%;
 		position: center;
-
+		margin-right: auto;
+		margin-left: auto;
+		text-align: center;
 	}
 
 	.box{
-
 		text-align: center;
 		border: black solid 1px;
-		
-		width: 180px; 
+		width: 90%; 
 		padding-right: 0; 
 		padding-left: 0%; 
 		height: 200px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.winner{
+		width: 180px;
 	}
 }
 
@@ -191,16 +193,20 @@ left: 5px;
 	.navbar-form{
 		margin-left: 300px;
 	}
-
 	.box{
-
 		width:90%;
-
 	}
 	.longbox{
-
 		width:90%;
 		text-align: center; 
+	}
+}
+@media screen and (max-width: 850px){
+	.sidenav-content{
+		width: 10%;
+	}
+	.main-content{
+		vertical-align: top;
 	}
 }
 @media screen and (max-width: 770px){
@@ -210,8 +216,6 @@ left: 5px;
 		padding: 0;
 		vertical-align: top;
 	}
-}
-@media screen and (max-width: 760px){
 	.navbar-form{
 		display: none;
 	}
@@ -224,18 +228,21 @@ left: 5px;
 		float: right;
 	}
 }
+
 @media screen and (max-width: 600px){
-
-	.sidenav-content{
-
-		display:none;
+	.main-content{
+		width: 100%;
 	}
-
+	.content{
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.sidenav-content{
+		display: none;
+	}
+}
 @media screen and (max-width: 390px){
 	.navbar-nav{
 		float: right;
 	}
-
-
-
 }
