@@ -28,21 +28,21 @@
 	<div class="text-center">
 		<!-- Main Form -->
 		<div class="login-form-1">
-			<form id="login-form" class="text-left">
+			<form id="login-form" class="text-left" method="post" action="<?php $_SERVER['PHP_SELF']?>">
 				<div class="login-form-main-message"></div>
 				<div class="main-login-form">
 					<div class="login-group">
 						<div class="form-group">
 							<h2>login</h2>
 							<label for="lg_username" class="sr-only">Username</label>
-							<input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username">
+							<input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username" value="<?php if (isset($_POST['lg_username']))?>">
 						</div>
 						<div class="form-group">
 							<label for="lg_password" class="sr-only">Password</label>
-							<input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password">
+							<input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password" value="<?php if (isset($_POST['lg_password']))?>">
 						</div>
 						
-						<button type="submit" value="Submit" class="login-button" onclick="window.location='index.html'">Login  <i class="fas fa-sign-in-alt"></i></button>
+						<input type="submit" value="Login" class="login-button">
 						
 						<div class="form-group login-group-checkbox">
 							<input type="checkbox" id="lg_remember" name="lg_remember">
@@ -55,6 +55,19 @@
 					<p>new user? <a href="#">create new account</a></p>
 				</div>
 			</form>
+			<?php
+				$lg_username=$lg_password=NULL; 
+
+				if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+					if (empty($_POST['lg_password']) || empty($_POST['lg_username'])){
+						echo "<font color='red'><i>Please enter both a username and password</i></font><br/>";
+					}
+					else{
+						header('Location:index.html');
+						exit; 
+					}
+				}
+			?>
 		</div>
 		<!-- end:Main Form -->
 	</div>
