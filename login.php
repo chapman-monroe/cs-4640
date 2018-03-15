@@ -56,16 +56,28 @@
 				</div>
 			</form>
 			<?php
-				$lg_username=$lg_password=NULL; 
+				$name=$password=NULL; 
 
 				if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-					if (empty($_POST['lg_password']) || empty($_POST['lg_username'])){
+					$name = fixInput($_POST["lg_username"]);
+  					$password = fixInput($_POST["lg_password"]);
+					
+					if (empty($_POST["lg_username"]) || empty($_POST["lg_password"])){
 						echo "<font color='red'><i>Please enter both a username and password</i></font><br/>";
+					}
+					//validate username 
+					if (!preg_match("/^[a-zA-Z]*$/", $name)) {
+						echo "<font color='red'><i>Username can only contain letters</i></font><br/>";
 					}
 					else{
 						header('Location:index.html');
 						exit; 
 					}
+				}
+
+				function fixInput($data) {
+  					$data = trim($data);
+  					return $data;
 				}
 			?>
 		</div>
