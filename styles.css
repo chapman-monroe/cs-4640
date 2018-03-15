@@ -12,6 +12,7 @@ body{
 }
 .navbar-brand{
 	padding: 0 0 0 15px;
+	width: 90px;
 }
 .logo{
 	width: 50px;
@@ -30,15 +31,17 @@ body{
 	font-style: bold;
 	padding: 15px;
 }
+.navbar-inverse{
+	color: white;
+}
 
 /*Sidebar Styles*/
 .sidenav-content{
 	margin-left: 65px;
 	display: inline-block;
-	height: 100%; 
-    /*position: absolute; 
+	height: 100%;  
     top: 20px; 
-    left: 0;*/
+    left: 0;
     overflow-x: hidden; 
     padding-top: 20px;
     vertical-align: top;
@@ -50,16 +53,26 @@ body{
 .sidenav-content a{
 	display: block;
 	font-size: 16px;
-}
+} 
 /*Main Box Styles*/
+.main-content-home{
+	width: 98%;
+	margin-left: auto;
+	margin-right: auto;
+}
 .main-content{
 	display: inline-block;
 	width: 75%;
 	/*position: relative;*/
-	right: 15px;
+	/*right: 15px;*/
+	margin-right: 80px;
 }
 .row{
 	margin: 0;
+}
+.content-home{
+	background-color: #E0E0E0;
+	padding: 20px;
 }
 .content{
 	margin-left: 80px;
@@ -72,7 +85,7 @@ body{
 	margin: 0;
 }
 .main-row{
-	width: 95%;
+	width: 98%;
 	background-color: white; 
 	margin: 15px auto;
 }
@@ -85,6 +98,22 @@ body{
 .row-header{
 	border-bottom: black solid 1px;
 }
+.home-box{
+	text-align: center;
+	border: black solid 1px;
+	margin: 15px 1.6%;
+	width: 30%; 
+	padding-right: 0; 
+	padding-left: 0; 
+	height: 200px;
+	display: inline-block;
+}
+.home-box h4{
+	font-size: 64px;
+	position: relative;
+	padding-top: 50px;
+}
+
 .box{
 	text-align: center;
 	border: black solid 1px;
@@ -190,6 +219,18 @@ left: 5px;
 	}
 }
 
+@media screen and (min-width: 985px ){
+	.winner{
+		width: 180px;
+	}
+}
+
+@media screen and (max-width: 991px){
+	.home-box{
+		vertical-align: bottom;
+	}
+}
+
 @media screen and (max-width: 960px){
 	.navbar-form{
 		margin-left: 300px;
@@ -209,17 +250,17 @@ left: 5px;
 	.main-content{
 		vertical-align: top;
 	}
+	.home-box{
+		width: 90%;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		margin-right: 5%;
+		margin-left: 5%;
+	}
 }
 @media screen and (max-width: 770px){
-	.navbar-nav{
-		display: inline-block;
-		margin: 0;
-		padding: 0;
-		vertical-align: top;
-	}
-	.navbar-form{
-		display: none;
-	}
+	
+	
 	.navbar-header{
 		width: 20%;
 		display: inline-block;
